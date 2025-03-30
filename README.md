@@ -2,7 +2,7 @@
   <img src="JWU_FULL_LOGO.png" alt="Jason Wang University Full Logo" width="300"/>
 </p>
 
-<h1 align="center">Jason Wang University - JWU Interactive Portal (JWUOSv0.1)</h1>
+<h1 align="center">Jason Wang University - JWU Interactive Portal</h1>
 
 <p align="center">
   <em>"Studium auto-summa vis est."</em><br/>
@@ -10,7 +10,6 @@
 </p>
 
 <p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-v0.1%20(Genesis)-blueviolet"/>
   <img alt="Build" src="https://img.shields.io/badge/build-passing-brightgreen"/>
   <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"/>
   <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-Ambiguously-orange"/>
@@ -21,7 +20,7 @@
 
 ## 🏛️ Overview
 
-Welcome to the official repository for the Jason Wang University (JWU) Interactive Portal, designated JWUOSv0.1. This project represents the digital forefront of JWU, an institution ambiguously founded on April 1, 2025, dedicated to the principles of extreme self-reliance and the masterful avoidance of conventional academic rigor.
+Welcome to the official repository for the Jason Wang University (JWU) Interactive Portal. This project represents the digital forefront of JWU, an institution ambiguously founded on April 1, 2025, dedicated to the principles of extreme self-reliance and the masterful avoidance of conventional academic rigor.
 
 This web application serves as the primary interface for prospective and current students, embodying the university's unique philosophy through interactive features and carefully curated information. Built with foundational web technologies, it offers a glimpse into the unparalleled experience of self-directed "learning" at JWU.
 
@@ -44,6 +43,23 @@ This initial release (v0.1 - Genesis) showcases the core functionalities reflect
     * <span style="color: #4f4758;">■</span> **Forget Research:** Interest-based exploration over innovation.
     * <span style="color: #4f4758;">■</span> **Non-existing Environment:** Leveraging third-party cafes and home environments.
     * <span style="color: #4f4758;">■</span> **Fucked-up Skills:** Developing resilience against criticism and PUA.
+
+### 📜 Changelog
+
+* **v0.2 (Bilingual Update) - 2025-03-30**
+    * Added bilingual support (EN-US/简体中文).
+    * Implemented language switching links.
+    * Added Changelog section.
+    * Updated version badge to v0.2.
+* **v0.1 (Genesis) - Initial Release**
+    * Initial release of the JWU Interactive Portal.
+    * Includes core Single-Page Application (SPA) functionality.
+    * Adaptive Light/Dark theming with `localStorage` persistence.
+    * Interactive particle background adapting to theme.
+    * Glassmorphism UI elements.
+    * Responsive design for various screen sizes.
+    * Flagship Admission Letter Generator (PDF) using `jsPDF`.
+    * Foundational satirical content outlining JWU's unique approach.
 
 ## 💻 Technology Stack
 
