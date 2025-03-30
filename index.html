@@ -576,7 +576,7 @@
                            <option value="Undergraduate">Undergraduate</option>
                            <option value="Master's">Master's</option>
                            <option value="PhD">PhD</option>
-                           <option value="3+2 Program">3+2 Program</option>
+                           <option value="3+2">3+2 Program</option>
                         </select>
                      </div>
                      <div class="form-group" id="partner-uni-wrapper" style="display: none;">
@@ -840,7 +840,7 @@
              const honorsCheckbox = document.getElementById("honors-college");
              const pdfStatus = document.getElementById("pdf-status");
              programTypeSelect.addEventListener("change", () => {
-                 if (programTypeSelect.value === "3+2 Program") {
+                 if (programTypeSelect.value === "3+2") {
                      partnerUniWrapper.style.display = "block";
                  } else {
                      partnerUniWrapper.style.display = "none";
@@ -869,7 +869,7 @@
                          else if (!collegeSchool) collegeSchoolInput.focus();
                          return;
                      }
-                     if (programType === "3+2 Program" && !partnerUniversity) {
+                     if (programType === "3+2" && !partnerUniversity) {
                          pdfStatus.textContent = "Please specify the Partner University for the 3+2 Program.";
                          partnerUniInput.focus();
                          return;
@@ -913,7 +913,7 @@
                          doc.text(`Dear ${studentName},`, pageMargin, yPos);
                          yPos += paragraphSpacing;
                          let admissionText1 = `Congratulations! On behalf of the Admissions Committee and myself, it is my great pleasure to offer you admission to Jason Wang University for the upcoming academic year into our ${programType} program. `;
-                         if (programType === "3+2 Program") {
+                         if (programType === "3+2") {
                              admissionText1 += `This is part of our collaborative 3+2 arrangement with ${partnerUniversity}. `;
                          }
                          admissionText1 += `Your poor academic record, watery personal achievements, and unique shitty potential have deeply impressed us.`;
