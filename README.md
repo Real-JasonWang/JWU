@@ -45,7 +45,8 @@ This initial release (v0.1 - Genesis) showcases the core functionalities reflect
     * <span style="color: #4f4758;">■</span> **Fucked-up Skills:** Developing resilience against criticism and PUA.
 
 ### 📜 Changelog
-
+* **v1 (General Update) - 2025-03-31**
+    * Fixed tons of bugs.
 * **v0.2 (Bilingual Update) - 2025-03-30**
     * Added bilingual support (EN-US/简体中文).
     * Implemented language switching links.
