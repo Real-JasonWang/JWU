@@ -13,7 +13,7 @@
   <img alt="Build" src="https://img.shields.io/badge/build-passing-brightgreen"/>
   <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"/>
   <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-Ambiguously-orange"/>
-  <img alt="Rank" src="https://img.shields.io/badge/World%20Rank-%2323,625-red"/>
+  <img alt="Rank" src="https://img.shields.io/badge/World%20Rank-%2363,625-red"/>
 </p>
 
 ---
@@ -26,142 +26,90 @@ This web application serves as the primary interface for prospective and current
 
 ## ✨ Key Features
 
-This initial release (v0.1 - Genesis) showcases the core functionalities reflecting JWU's distinct educational paradigm:
+This release showcases the core functionalities reflecting JWU's distinct educational paradigm:
 
-* **Dynamic Single-Page Application (SPA) Interface:** Seamless navigation between key university sections (Home, Academics, Admissions, About) without page reloads, providing a fluid user experience.
-* **Adaptive Theming:** Features both Light and Dark Mode themes, respecting user system preferences or allowing manual toggling for optimal viewing comfort. The theme persists across sessions using `localStorage`.
-* **Interactive Particle Background:** A visually engaging, animated particle system rendered on an HTML Canvas, adding a layer of sophisticated ambiance. The particle color adapts dynamically to the selected theme.
-* **Glassmorphism UI:** Modern user interface design employing frosted glass effects (`backdrop-filter`) for cards and containers, enhancing aesthetic appeal.
-* **Responsive Design:** Adapts layout and styling for various screen sizes, ensuring accessibility across desktops, tablets, and mobile devices.
-* **🚨 Admission Letter Generator:** A flagship feature allowing users to instantly generate their *own* personalized (and binding?) JWU admission letter in PDF format. Utilizes the `jsPDF` library for client-side PDF creation.
-    * Customizable fields: Student Name, Program Type (Undergraduate, Master's, PhD, 3+2), Major, College/School.
-    * Optional fields: Partner University (for 3+2), Scholarship Details, Admission to the prestigious "Commonshit Honors College".
-* **Satirical Content Delivery:** Presents information about JWU's unique approach to:
-    * <span style="color: #4f4758;">■</span> **Customizable Academics:** Flexible, self-tailored programs leading to "unprofessional results".
-    * <span style="color: #4f4758;">■</span> **Self-Mentorship:** Mastery achieved with no materials or peer support.
-    * <span style="color: #4f4758;">■</span> **No Community:** Encouraging creativity in isolation.
-    * <span style="color: #4f4758;">■</span> **Forget Research:** Interest-based exploration over innovation.
-    * <span style="color: #4f4758;">■</span> **Non-existing Environment:** Leveraging third-party cafes and home environments.
-    * <span style="color: #4f4758;">■</span> **Fucked-up Skills:** Developing resilience against criticism and PUA.
+* **Dynamic Single-Page Application (SPA) Interface:** Seamless navigation between key university sections (Home, Academics, Admissions, About) without page reloads.
+* **Adaptive Theming:** Features both Light and Dark Mode themes, respecting user system preferences or allowing manual toggling via `localStorage`.
+* **Interactive Particle Background:** A visually engaging, animated particle system rendered on an HTML Canvas that adapts dynamically to the selected theme.
+* **Glassmorphism UI:** Modern user interface design employing frosted glass effects (`backdrop-filter`) for cards and containers.
+* **Responsive Design:** Adapts layout and styling for various screen sizes, ensuring accessibility across desktops and mobile devices.
+* **Bilingual Support:** Full support for English (EN-US) and Simplified Chinese (简体中文) with instant language switching.
+* **🚨 Admission Letter Generator:** Instantly generate a personalized JWU admission letter in PDF format.
+* **🎓 Advanced Diploma Generator:** A sophisticated tool to customize academic fraud with precision, allowing for primary/secondary majors, minors, and custom GPA/honors fields.
+* **Satirical Content Delivery:** Detailed sections on:
+    * **Customizable Academics:** Programs leading to "unprofessional results".
+    * **Self-Mentorship:** Mastery with zero peer support.
+    * **No Community:** Creativity through social intimidation and isolation.
+    * **Forget Research:** Curiosity-guided exploration instead of innovation.
+    * **Non-existing Environment:** Utilizing non-partnered cafes and home environments.
+    * **Fucked-up Skills:** Resilience against academic PUA and "tanking" capabilities.
 
 ### 📜 Changelog
+* **v2.0 (The 2026 Anniversary Update) - 2026-03-30**
+    * Added the **Advanced Diploma Generator** for precise academic fraud.
+    * Added **JWU 1st Anniversary Celebration** section featuring the "Global Do-Nothing-and-Shit-Yourself Day".
+    * Implemented the **Ultimate Shiting Procrastination Marathon** activity description.
+
+    * Added falling emoji effects (💩, 📄, 🎓, etc.) upon PDF generation.
+    * Integrated system logs for "expanding the Shit Mountain" and "optimizing social anxiety".
 * **v1 (General Update) - 2025-03-31**
-    * Fixed tons of bugs.
+    * Fixed tons of bugs and finalized core SPA logic.
 * **v0.2 (Bilingual Update) - 2025-03-30**
-    * Added bilingual support (EN-US/简体中文).
-    * Implemented language switching links.
-    * Added Changelog section.
-    * Updated version badge to v0.2.
+    * Added bilingual support (EN-US/简体中文) and language switching.
 * **v0.1 (Genesis) - Initial Release**
-    * Initial release of the JWU Interactive Portal.
-    * Includes core Single-Page Application (SPA) functionality.
-    * Adaptive Light/Dark theming with `localStorage` persistence.
-    * Interactive particle background adapting to theme.
-    * Glassmorphism UI elements.
-    * Responsive design for various screen sizes.
-    * Flagship Admission Letter Generator (PDF) using `jsPDF`.
-    * Foundational satirical content outlining JWU's unique approach.
+    * Initial release with SPA functionality, adaptive theming, and the flagship Admission Letter Generator.
 
 ## 💻 Technology Stack
 
-JWUOSv0.1 is meticulously crafted (or perhaps hastily assembled) using fundamental, yet powerful, web technologies:
-
-* **Frontend:** HTML5, CSS3 (including CSS Variables & Media Queries)
-* **Interactivity:** Vanilla JavaScript (ES6+)
-* **PDF Generation:** jsPDF Library (v2.5.1 via CDN)
-* **Styling Philosophy:** Glassmorphism, Responsive Design, Adaptive Theming
-* **Fonts:** Google Sans, Roboto (via Google Fonts)
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jason Wang University - JWUOSv0.1</title>
-    <script src="[https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js](https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js)"></script>
-    <style>/* ... CSS Rules ... */</style>
-  </head>
-  <body>
-    <canvas id="particle-canvas"></canvas>
-    <div class="container">
-      </div>
-    <script>/* ... JavaScript Logic ... */</script>
-  </body>
-</html>
-```
+* **Frontend:** HTML5, CSS3 (CSS Variables, Media Queries, Backdrop Filters).
+* **Interactivity:** Vanilla JavaScript (ES6+).
+* **PDF Generation:** jsPDF Library (v2.5.1 via CDN).
+* **Visuals:** HTML Canvas API for the particle system.
 
 ## 🚀 Getting Started
 
-To explore the Jason Wang University portal locally:
-
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/your-username/jason-wang-university.git](https://www.google.com/search?q=https://github.com/your-username/jason-wang-university.git)
-    cd jason-wang-university
+    git clone [https://github.com/real-jasonwang/JWU.git](https://github.com/real-jasonwang/JWU.git)
+    cd JWU
     ```
-2.  **Obtain Assets:** Ensure you have the necessary image assets in the root directory:
+2.  **Obtain Assets:** Required images in the root directory:
     * `JWU_BLK_LOGO.png`
     * `JWU_FULL_LOGO.png`
-    * `signature.png` (Note: This is referenced for the PDF generator)
-3.  **Open the Portal:** Simply open the `index.html` file in your preferred web browser.
-    * On macOS: `open index.html`
-    * On Windows: `start index.html`
-    * On Linux: `xdg-open index.html`
-
-No complex build steps or dependencies are required, reflecting JWU's commitment to minimalist overhead.
+    * `signature.png`
+    * `qr.png`
+3.  **Open the Portal:** Open `index.html` in any modern web browser.
 
 ## 🧭 Usage
 
-* **Navigation:** Use the header links (Home, Academics, Admissions, About) or click the University Logo to switch between sections.
-* **Theme Toggle:** Click the "Toggle Theme" button in the header to switch between light and dark modes.
-* **Admission Letter Generator:**
-    1.  Navigate to the "Admissions" section.
-    2.  Locate the "Admission Letter Generator" card.
-    3.  Fill in the required fields (Student Name, Major, College/School).
-    4.  Select the appropriate Program Type. If "3+2 Program" is chosen, specify the Partner University.
-    5.  Optionally, enter Scholarship details and check the box for Honors College admission.
-    6.  Click the "Generate PDF" button.
-    7.  Your personalized admission letter PDF will be generated and downloaded by your browser.
+* **Navigation:** Use the header links or the University Logo to switch between Home, Academics, Admissions, and About.
+* **Theme/Language Toggle:** Use the buttons in the header to switch between Light/Dark mode or EN/ZH languages.
+* **Admission/Diploma Generation:**
+    1.  Navigate to the **Admissions** section.
+    2.  Fill in the required fields in either the Admission Letter or Diploma Generator.
+    3.  Click **Generate PDF** to trigger the falling emoji animation and download your document.
 
 ## 🎓 Academics at JWU (Abridged)
 
-JWU offers a unique, self-directed academic experience ranked #23,625 globally.
-
-* **Degree Programs:** Bachelor of Science (curiosity-driven), Master's (unspecialized self-study), PhD (formulaic research at own expense), 3+2 Programs (with select partners like Wild Chicken University).
-* **Major Fields:** Utilize the renowned "Build Your Major" program for true academic autonomy, perfectly suited to your unique temperament.
-* **Recommended AI Minors:** While not formally offered, JWU *recommends* exploring minors such as Applied ChatGPT Writing, Advanced Gemini Imagen 3 Art History, Creative Claude Chatting, and 100 Percent AI Generated Code.
-* **The JWU Commonshit Honors College:** For those demonstrating exceptional talent in self-indulgence or academic folly, offering the exact same nonexistent privileges but with a uselessly powerful title.
+* **Degree Programs:** Bachelor of Science (curiosity-driven), Master's (unspecialized self-study), PhD (self-funded shit mountain contribution), and 3+2 Programs with partners like Wild Chicken University.
+* **Major Fields:** Features the "Build Your Major" program for true academic autonomy without expert guidance.
+* **Recommended AI Minors:** Including Applied ChatGPT Writing, Advanced Midjourney Cringe Aesthetics, and Strategic LinkedIn Bullshit Generation.
+* **The JWU Commonshit Honors College:** A prestigious title for those excelling in self-indulgence, offering access to the "Honors Homeless-Learning Community".
 
 ## 📜 About & Mission
 
-Founded amidst midterm meltdowns and failed social connections, JWU steadfastly avoids innovation, catering to the extremely self-reliant and socially confused. It thrives as an immaterial entity centered around the student's immediate environment (dorm table goo, coffee shop detritus, park benches). This spirit of "shitism" defines JWU as a proudly wild-listed institution technically accepting anyone.
+JWU caters to the extremely self-reliant and socially confused, embracing an identity found in dorm table goo and questionable Wi-Fi.
 
 **Mission Statement:**
-
-> Jason Wang University's name and spirit are derived from one man's valiant efforts to minimize external obligations. The university exists entirely within the student's radius of hardware and instant caffeine (or marijuana high if you are in California and Canada), all of which are magnets for shunning talented, ambitious individuals.
->
-> Thriving within strict personal boundaries and spanning zero verifiable disciplines, JWU has become the world's most minimalist platform for circumventing the challenges of learning, teaching, researching, building knowledge, and inventing new ways to ignore the human condition. Its students draw strength from the stimulating power of unfiltered internet access by mastering procrastination, barely expressing themselves online, and excelling at avoiding demanding careers. Jason Wang University's mission is to be a cozy, bottom-tier international hub. This includes not retaining any faculty, encouraging students to create projects that attract no funding, and providing an environment of intellectual void. Jason Wang University seeks to leverage the academic disadvantage of its completely inconvenient location and embrace uniformity to ensure a single, unwavering point of view in the educational void.
+> "The university exists entirely within the student's radius of hardware and instant caffeine... a minimalist platform for circumventing the challenges of learning, teaching, and researching."
 
 ## 🤝 Contributing
 
-While JWU champions self-reliance, contributions that enhance the portal's satirical reflection of the university's ethos *might* be considered. Please adhere to standard GitHub flow (fork, branch, pull request). Ensure contributions maintain the project's high standards of academic parody and technical simplicity.
-
-1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
+Contributions that enhance the satirical reflection of the university's ethos are welcome. Please follow the standard fork and pull request flow.
 
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE.txt` (if one existed) for more information. In the spirit of JWU, consider all code public domain, but use it at your own peril.
-
-## 🙏 Acknowledgements
-
-* **jsPDF:** For enabling the crucial Admission Letter Generator functionality.
-* **The Concept of Higher Education:** For providing such fertile ground for parody.
-* **Jason Wang:** The inspirational figurehead.
+Distributed under the MIT License. Copyright (c) 2025-2026 WEIFENG WANG.
 
 ---
 
@@ -169,5 +117,5 @@ Distributed under the MIT License. See `LICENSE.txt` (if one existed) for more i
   <img src="JWU_BLK_LOGO.png" alt="Jason Wang University Block Logo" width="100"/>
 </p>
 <p align="center">
-  &copy; 2025 Jason Wang University. All rights reserved.
+  &copy; 2026 Jason Wang University. All rights reserved.
 </p>

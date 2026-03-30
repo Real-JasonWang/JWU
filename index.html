@@ -1,233 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Jason Wang University - JWU</title>
-      <meta name="description" content="Welcome to Jason Wang University (JWU)" />
-      <meta name="keywords" content="Jason Wang University, JWU, satire, parody university, self-study, customizable major, anti-social, higher education parody, virtual university, automatic admission, OS, Jason Wang, Weifeng Wang, college parody, satirical institution, higher education satire, academic parody, fake university, joke university, pretend college, humorous university, online university satire, independent learning, autonomous study, autodidact learning, self-directed education, self-teaching, learn on your own, no guidance learning, zero support study, build your own major, DIY degree, flexible curriculum satire, personalized education parody, non-standard majors, design your degree, unconventional studies, instant admission, admission letter generator, generate admission, no rejection, easy admission, open admission parody, university acceptance joke, no resources, no faculty, no community, zero funding, non-existent environment, digital campus parody, at-home university, coffee shop campus, park bench study, minimal support, Commonshit Honors College, honors college parody, shit science, college of feces, fucked-up skills, hardcore stress resistance, anti-PUA training, academic PUA, workplace PUA, shitism philosophy, minimalist education, bottom-tier university, AI minors, ChatGPT writing, Gemini Imagen art history, Claude chatting, AI generated code, generative AI parody, AI education satire, university meme, college humor, student life parody, academic jokes, funny website, web humor, internet satire, Gen Z humor, student stress relief, application season humor, online learning parody, virtual campus joke, distance education satire, future of education parody, alternative education humor, degree mill satire, unaccredited university parody, international university satire, global education joke, student independence parody, critical thinking satire, self study university, custom major university, parody college website, satirical academic program, virtual learning environment parody, useless degree, funny diploma, prank university, fictional university, conceptual university" />
-      <meta name="author" content="Jason Wang" />
-      <link rel="icon" type="image/png" sizes="32x32" href="JWU_BLK_LOGO.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="JWU_BLK_LOGO.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="JWU_BLK_LOGO.png">
-      <meta property="og:title" content="Jason Wang University - JWU" />
-      <meta property="og:description" content="Explore JWU: No resources, no guidance, just pure self-directed learning. Build your major, generate your admission. Welcome to the future." />
-      <meta property="og:image" content="JWU_FULL_LOGO.png" />
-      <meta property="og:url" content="https://real-jasonwang.github.io/JWU/" />
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Jason Wang University" />
-      <meta property="og:locale" content="en_US" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Jason Wang University - JWU" />
-      <meta name="twitter:description" content="Tired of traditional education? JWU offers... well, mostly just the freedom to figure it out yourself. Check out JWU!" />
-      <meta name="twitter:image" content="JWU_FULL_LOGO.png" />
-      <meta name="twitter:url" content="https://real-jasonwang.github.io/JWU/" />
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-      <script src="base_v1.js"></script>
-      <link rel="stylesheet" type="text/css" href="style_v1.css">
-   </head>
-   <body>
-      <canvas id="particle-canvas"></canvas>
-      <div class="container">
-         <header>
-            <a href="#" class="logo" data-page="home">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Jason Wang University - JWU</title>
+   <meta name="description" content="Welcome to Jason Wang University (JWU)" />
+   <meta name="keywords"
+      content="Jason Wang University, JWU, satire, parody university, self-study, customizable major, anti-social, higher education parody, virtual university, automatic admission, OS, Jason Wang, Weifeng Wang, college parody, satirical institution, higher education satire, academic parody, fake university, joke university, pretend college, humorous university, online university satire, independent learning, autonomous study, autodidact learning, self-directed education, self-teaching, learn on your own, no guidance learning, zero support study, build your own major, DIY degree, flexible curriculum satire, personalized education parody, non-standard majors, design your degree, unconventional studies, instant admission, admission letter generator, generate admission, no rejection, easy admission, open admission parody, university acceptance joke, no resources, no faculty, no community, zero funding, non-existent environment, digital campus parody, at-home university, coffee shop campus, park bench study, minimal support, Commonshit Honors College, honors college parody, shit science, college of feces, fucked-up skills, hardcore stress resistance, anti-PUA training, academic PUA, workplace PUA, shitism philosophy, minimalist education, bottom-tier university, AI minors, ChatGPT writing, Gemini Imagen art history, Claude chatting, AI generated code, generative AI parody, AI education satire, university meme, college humor, student life parody, academic jokes, funny website, web humor, internet satire, Gen Z humor, student stress relief, application season humor, online learning parody, virtual campus joke, distance education satire, future of education parody, alternative education humor, degree mill satire, unaccredited university parody, international university satire, global education joke, student independence parody, critical thinking satire, self study university, custom major university, parody college website, satirical academic program, virtual learning environment parody, useless degree, funny diploma, prank university, fictional university, conceptual university" />
+   <meta name="author" content="Jason Wang" />
+   <link rel="icon" type="image/png" sizes="32x32" href="JWU_BLK_LOGO.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="JWU_BLK_LOGO.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="JWU_BLK_LOGO.png">
+   <meta property="og:title" content="Jason Wang University - JWU" />
+   <meta property="og:description"
+      content="Explore JWU: No resources, no guidance, just pure self-directed learning. Build your major, generate your admission. Welcome to the future." />
+   <meta property="og:image" content="JWU_FULL_LOGO.png" />
+   <meta property="og:url" content="https://real-jasonwang.github.io/JWU/" />
+   <meta property="og:type" content="website" />
+   <meta property="og:site_name" content="Jason Wang University" />
+   <meta property="og:locale" content="en_US" />
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:title" content="Jason Wang University - JWU" />
+   <meta name="twitter:description"
+      content="Tired of traditional education? JWU offers... well, mostly just the freedom to figure it out yourself. Check out JWU!" />
+   <meta name="twitter:image" content="JWU_FULL_LOGO.png" />
+   <meta name="twitter:url" content="https://real-jasonwang.github.io/JWU/" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+   <script src="base_v1.js"></script>
+   <link rel="stylesheet" type="text/css" href="style_v1.css">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="theme-color" content="#4f4758" media="(prefers-color-scheme: light)" />
+   <meta name="theme-color" content="#292532" media="(prefers-color-scheme: dark)" />
+   <meta name="color-scheme" content="light dark" />
+   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+   <meta name="googlebot" content="index, follow" />
+   <meta name="rating" content="general" />
+   <meta name="distribution" content="global" />
+   <meta name="revisit-after" content="1 days" />
+   <meta name="language" content="English" />
+   <meta name="generator" content="JWU Auto-Apathy Generator 2026" />
+   <meta name="publisher" content="Jason Wang" />
+   <meta name="creator" content="Jason Wang" />
+   <meta name="subject" content="Satirical Higher Education" />
+   <meta name="abstract" content="The premier destination for completely automated, non-existent degrees." />
+   <meta name="topic" content="Education Parody" />
+   <meta name="summary"
+      content="Jason Wang University is a satirical institution dedicated to extreme self-reliance and complete digital nullity." />
+   <meta name="category" content="Education" />
+   <meta property="og:locale:alternate" content="zh_CN" />
+   <meta property="og:image:width" content="1200" />
+   <meta property="og:image:height" content="630" />
+   <meta property="og:image:alt" content="Jason Wang University Full Logo" />
+   <meta property="og:image:type" content="image/png" />
+   <meta property="og:determiner" content="the" />
+   <meta property="article:published_time" content="2025-04-01T00:00:00Z" />
+   <meta property="article:modified_time" content="2026-03-29T00:00:00Z" />
+   <meta property="article:author" content="Jason Wang" />
+   <meta property="article:section" content="Education" />
+   <meta property="article:tag" content="Parody" />
+   <meta property="article:tag" content="University" />
+   <meta property="article:tag" content="Automated Degree" />
+   <meta property="profile:username" content="jasonwang" />
+   <meta name="twitter:site" content="@JasonWangUni" />
+   <meta name="twitter:creator" content="@JasonWangUni" />
+   <meta name="twitter:image:alt" content="JWU Official Seal" />
+   <meta name="twitter:label1" content="Est." />
+   <meta name="twitter:data1" content="April 1, 2025" />
+   <meta name="twitter:label2" content="World Rank" />
+   <meta name="twitter:data2" content="#63,625" />
+   <meta name="apple-mobile-web-app-capable" content="yes" />
+   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+   <meta name="apple-mobile-web-app-title" content="JWU 2026" />
+   <meta name="application-name" content="JWU Portal" />
+   <meta name="format-detection" content="telephone=no" />
+   <meta name="format-detection" content="date=no" />
+   <meta name="format-detection" content="address=no" />
+   <meta name="format-detection" content="email=no" />
+   <meta name="msapplication-TileColor" content="#292532" />
+   <meta name="msapplication-TileImage" content="JWU_BLK_LOGO.png" />
+   <meta name="msapplication-config" content="browserconfig.xml" />
+   <meta name="msapplication-navbutton-color" content="#4f4758" />
+   <meta name="mobile-web-app-capable" content="yes" />
+   <link rel="icon" type="image/png" sizes="192x192" href="JWU_BLK_LOGO.png">
+   <link rel="icon" type="image/png" sizes="512x512" href="JWU_BLK_LOGO.png">
+   <link rel="mask-icon" href="JWU_BLK_LOGO.png" color="#4f4758">
+   <link rel="canonical" href="https://real-jasonwang.github.io/JWU/" />
+   <link rel="shortlink" href="https://real-jasonwang.github.io/JWU/" />
+   <link rel="alternate" hreflang="en" href="https://real-jasonwang.github.io/JWU/?lang=en" />
+   <link rel="alternate" hreflang="zh" href="https://real-jasonwang.github.io/JWU/?lang=zh" />
+   <link rel="alternate" hreflang="x-default" href="https://real-jasonwang.github.io/JWU/" />
+   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <meta name="geo.region" content="US-PA" />
+   <meta name="geo.placename" content="Digital Void" />
+   <meta name="geo.position" content="0;0" />
+   <meta name="ICBM" content="0, 0" />
+   <meta name="DC.title" content="Jason Wang University - JWU" />
+   <meta name="DC.creator" content="Jason Wang" />
+   <meta name="DC.subject" content="Education Parody" />
+   <meta name="DC.description"
+      content="Welcome to Jason Wang University (JWU), the premier destination for zero-effort, automated learning." />
+   <meta name="DC.publisher" content="Jason Wang" />
+   <meta name="DC.contributor" content="Jason Wang" />
+   <meta name="DC.date" content="2026-03-29" />
+   <meta name="DC.type" content="InteractiveResource" />
+   <meta name="DC.format" content="text/html" />
+   <meta name="DC.identifier" content="https://real-jasonwang.github.io/JWU/" />
+   <meta name="DC.source" content="JWU Central Command" />
+   <meta name="DC.language" content="en-US" />
+   <meta name="DC.relation" content="JWU Commonshit Honors College" />
+   <meta name="DC.coverage" content="Global" />
+   <meta name="DC.rights" content="All rights reserved." />
+   <meta name="jwu:philosophy" content="Studium auto-summa vis est" />
+   <meta name="jwu:version" content="2.0.26" />
+   <meta name="jwu:auto-graduation" content="enabled" />
+   <meta name="jwu:404-campus" content="active" />
+   <meta name="jwu:effort-required" content="0%" />
+</head>
+
+<body>
+   <canvas id="particle-canvas"></canvas>
+   <div class="container">
+      <header>
+         <a href="#" class="logo" data-page="home">
             <img src="JWU_BLK_LOGO.png" alt="Jason Wang University Logo" />
             Jason Wang University
-            </a>
-            <nav>
-               <ul>
-                  <li><a href="#" data-page="home" class="nav-active" data-translate-key="navHome">Home</a></li>
-                  <li><a href="#" data-page="academics" data-translate-key="navAcademics">Academics</a></li>
-                  <li><a href="#" data-page="admissions" data-translate-key="navAdmissions">Admissions</a></li>
-                  <li><a href="#" data-page="about" data-translate-key="navAbout">About</a></li>
-               </ul>
-            </nav>
-            <button class="theme-toggle" id="language-toggle" aria-label="Toggle language">EN-US / 简体中文</button>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+         </a>
+         <nav>
+            <ul>
+               <li><a href="#" data-page="home" class="nav-active" data-translate-key="navHome">Home</a></li>
+               <li><a href="#" data-page="academics" data-translate-key="navAcademics">Academics</a></li>
+               <li><a href="#" data-page="admissions" data-translate-key="navAdmissions">Admissions</a></li>
+               <li><a href="#" data-page="about" data-translate-key="navAbout">About</a></li>
+            </ul>
+         </nav>
+         <button class="theme-toggle" id="language-toggle" aria-label="Toggle language">EN-US / 简体中文</button>
+         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
             Toggle Theme
-            </button>
-         </header>
-         <main>
-            <section id="home-page" class="page-section active">
-               <section class="hero">
-                  <img src="JWU_FULL_LOGO.png" alt="Jason Wang University Logo" />
-                  <h1>Studium auto-summa vis est.</h1>
-                  <p data-translate-key="heroSubtitle1">Self-study is your greatest strength.</p>
-                  <p>·</p>
-                  <p data-translate-key="heroSubtitle2">Welcome to JWU.</p>
-               </section>
-               <section class="content-grid">
-                  <article class="card">
-                     <h3><span style="color: var(--primary-color);">■</span> <span data-translate-key="cardTitleAcademics">Customizable Academics</span></h3>
-                     <p data-translate-key="cardDescAcademics">Explore groundbreaking, flexible programs you tailor yourself. At JWU, you direct your unique learning journey towards unprofessional results.</p>
-                  </article>
-                  <article class="card">
-                     <h3><span style="color: var(--primary-color);">■</span> <span data-translate-key="cardTitleMentorship">Self-Mentorship</span></h3>
-                     <p data-translate-key="cardDescMentorship">Forge your own path to excellence. With no world-class materials and no peer support, you are your own guide. Mastery is self-made.</p>
-                  </article>
-                  <article class="card">
-                     <h3><span style="color: var(--primary-color);">■</span> <span data-translate-key="cardTitleCommunity">No Community</span></h3>
-                     <p data-translate-key="cardDescCommunity">If you are so socially intimidated, why would you connect with ambitious, motivated peers from all over the world? Be creative in a lonely atmosphere full of personal initiative.</p>
-                  </article>
-                  <article class="card">
-                     <h3><span style="color: var(--primary-color);">■</span> <span data-translate-key="cardTitleResearch">Forget Research</span></h3>
-                     <p data-translate-key="cardDescResearch">No one cares about your results because there is always something better. No need to invent leading edge innovations: conduct interest-based explorations guided by your own curiosity rather than research.</p>
-                  </article>
-                  <article class="card">
-                     <h3><span style="color: var(--primary-color);">■</span> <span data-translate-key="cardTitleEnvironment">Non-existing Environment</span></h3>
-                     <p data-translate-key="cardDescEnvironment">With digital and physical resources that simply aren not available, our third-party, non-partnered café and at-home environments support your self-directed success.</p>
-                  </article>
-                  <article class="card">
-                     <h3><span style="color: var(--primary-color);">■</span> <span data-translate-key="cardTitleSkills">Fucked-up Skills</span></h3>
-                     <p data-translate-key="cardDescSkills">Master critical thinking and build the ultimate future skill: strong tanking capabilities and the ability to strongly counter workplace and academic PUA and angry criticism of everything.</p>
-                  </article>
-               </section>
+         </button>
+      </header>
+      <main>
+         <section id="home-page" class="page-section active">
+            <section class="hero">
+               <img src="JWU_FULL_LOGO.png" alt="Jason Wang University Logo" />
+               <h1>Studium auto-summa vis est.</h1>
+               <p data-translate-key="heroSubtitle1">Self-study is your greatest strength.</p>
+               <p>·</p>
+               <p data-translate-key="heroSubtitle2">Welcome to JWU.</p>
             </section>
-            <section id="academics-page" class="page-section">
-               <div class="placeholder-content card">
-                  <h2 data-translate-key="academicsTitle">Academics at JWU</h2>
-                  <p style="margin-bottom: 30px;" data-translate-key="academicsIntro">As the #23,625 university in the world, JWU's academic philosophy is rooted in self-directed mastery. We provide nothing; you define your own knowledge and expertise.</p>
+            <section class="card"
+               style="margin-bottom: 40px; border: 2px solid var(--glass-border); position: relative; overflow: hidden;">
+               <h2 style="color: var(--primary-color); margin-bottom: 15px;" data-translate-key="anniversaryTitle">JWU
+                  1st Anniversary Celebration (2026!!!)</h2>
+               <p style="margin-bottom: 20px; font-style: italic;" data-translate-key="anniversaryDesc">
+                  Celebrating one year of total academic garbage! Join our exclusive Global Do-Nothing-and-Shit-Yourself
+                  Day where we collectively achieve zero progress. Since its ambiguous founding on April 1, 2025, JWU
+                  has set the gold standard for being a wild-listed institution. Participate in our Silence is Golden
+                  Shit virtual gala where we ghost everyone at the same time.
+               </p>
+               <div style="padding: 15px; background: var(--glass-border); border-radius: 8px;">
+                  <h4 style="margin-bottom: 5px;" data-translate-key="anniversaryActivityTitle">Featured: The Ultimate
+                     Shiting Procrastination Marathon</h4>
+                  <p style="font-size: 0.9em;" data-translate-key="anniversaryActivityDesc">A 24-hour spiritual
+                     breakdown where the goal is to shit your garbage thesis using 100% Sora-hallucinated data and
+                     AI-generated logic loops. Successfully end the day with a single, wrongly-formatted Chapter 1
+                     title, 14 hours of Pornhub history, and a folder full of AI-manipulated images bought from a
+                     predatory paper mill. Bonus points if you use ChatGPT to automate your fake peer reviews while
+                     being PUA'd by a LinkedIn career bot and ignoring 67 Expression of Concern emails from Nature.</p>
                </div>
-               <div class="placeholder-content card">
-                  <div style="text-align: left; max-width: 800px; margin: 0 auto;">
-                     <h2 style="color: var(--primary-color); margin-bottom: 15px; border-bottom: 1px solid var(--glass-border); padding-bottom: 5px;" data-translate-key="academicsDegreeExamplesTitle">Degree Examples</h2>
-                     <ul style="list-style: square; margin-left: 20px; margin-bottom: 30px;">
-                        <li data-translate-key="academicsDegreeBS">
-                           <strong>Bachelor of Science</strong><br />
-                           No solid foundation is needed, just be driven by your natural curiosity and shit in the fields of science and technology.
-                        </li>
-                        <li data-translate-key="academicsDegreeMasters">
-                           <strong>Master's Programs</strong><br />
-                           Fuck the shitty master's supervisor. Achieve complete unspecialization through loose and free self-study and self-designed advanced courses.
-                        </li>
-                        <li data-translate-key="academicsDegreePhD">
-                           <strong>Doctoral Programs</strong><br />
-                           Participate in formulaic parallel research at your own expense and contribute to the AI-generated knowledge of the shit mountain at the pinnacle of independent scholarship.
-                        </li>
-                        <li data-translate-key="academicsDegree3plus2">
-                           <strong>3+2 Programs</strong><br />
-                           Embrace the spirit of JWU and accelerate your journey toward a customized degree with select partner institutions such as Wild Chicken University and Home University (Shanghai Campus).
-                        </li>
-                     </ul>
-                     <h2 style="color: var(--primary-color); margin-bottom: 15px; border-bottom: 1px solid var(--glass-border); padding-bottom: 5px;" data-translate-key="academicsMajorFieldsTitle">Major Fields</h2>
-                     <p style="margin-bottom: 30px;" data-translate-key="academicsMajorFieldsDesc">
-                        Your major at JWU is a symbol of your independence. You can choose from our nonexistent and completely unproven portfolio of majors, or achieve true academic autonomy through our renowned Build Your Major
-                        program. Without the guidance of an expert, this unique pathway is perfectly suited to your unique temperament.
-                     </p>
-                     <h2 style="color: var(--primary-color); margin-bottom: 15px; border-bottom: 1px solid var(--glass-border); padding-bottom: 5px;" data-translate-key="academicsAIMinorsTitle">Recommended AI Minors</h2>
-                     <p style="margin-bottom: 15px;" data-translate-key="academicsAIMinorsDesc">
-                        Mastering generative artificial intelligence is fundamental to modern hocus pocus and the creation of shit mountains. JWU does not offer but recommends the following minors:
-                     </p>
-                     <ul style="list-style: square; margin-left: 20px; margin-bottom: 30px;">
-                        <li data-translate-key="academicsAIMinor1">Minor in Applied ChatGPT Writing</li>
-                        <li data-translate-key="academicsAIMinor2">Minor in Advanced Gemini Imagen 3 Art History</li>
-                        <li data-translate-key="academicsAIMinor3">Minor in Creative Claude Chatting</li>
-                        <li data-translate-key="academicsAIMinor4">Minor in 100 Percent AI Generated Code</li>
-                     </ul>
+            </section>
+            <section class="content-grid">
+               <article class="card">
+                  <h3><span style="color: var(--primary-color);">■</span> <span
+                        data-translate-key="cardTitleAcademics">Customizable Academics</span></h3>
+                  <p data-translate-key="cardDescAcademics">Explore groundbreaking, flexible programs you tailor
+                     yourself. At JWU, you direct your unique learning journey towards unprofessional results.</p>
+               </article>
+               <article class="card">
+                  <h3><span style="color: var(--primary-color);">■</span> <span
+                        data-translate-key="cardTitleMentorship">Self-Mentorship</span></h3>
+                  <p data-translate-key="cardDescMentorship">Forge your own path to excellence. With no world-class
+                     materials and no peer support, you are your own guide. Mastery is self-made.</p>
+               </article>
+               <article class="card">
+                  <h3><span style="color: var(--primary-color);">■</span> <span
+                        data-translate-key="cardTitleCommunity">No Community</span></h3>
+                  <p data-translate-key="cardDescCommunity">If you are so socially intimidated, why would you connect
+                     with ambitious, motivated peers from all over the world? Be creative in a lonely atmosphere full of
+                     personal initiative.</p>
+               </article>
+               <article class="card">
+                  <h3><span style="color: var(--primary-color);">■</span> <span
+                        data-translate-key="cardTitleResearch">Forget Research</span></h3>
+                  <p data-translate-key="cardDescResearch">No one cares about your results because there is always
+                     something better. No need to invent leading edge innovations: conduct interest-based explorations
+                     guided by your own curiosity rather than research.</p>
+               </article>
+               <article class="card">
+                  <h3><span style="color: var(--primary-color);">■</span> <span
+                        data-translate-key="cardTitleEnvironment">Non-existing Environment</span></h3>
+                  <p data-translate-key="cardDescEnvironment">With digital and physical resources that simply aren not
+                     available, our third-party, non-partnered café and at-home environments support your self-directed
+                     success.</p>
+               </article>
+               <article class="card">
+                  <h3><span style="color: var(--primary-color);">■</span> <span
+                        data-translate-key="cardTitleSkills">Fucked-up Skills</span></h3>
+                  <p data-translate-key="cardDescSkills">Master critical thinking and build the ultimate future skill:
+                     strong tanking capabilities and the ability to strongly counter workplace and academic PUA and
+                     angry criticism of everything.</p>
+               </article>
+            </section>
+         </section>
+         <section id="academics-page" class="page-section">
+            <div class="placeholder-content card">
+               <h2 data-translate-key="academicsTitle">Academics at JWU</h2>
+               <p style="margin-bottom: 30px;" data-translate-key="academicsIntro">As the #63,625 university in the
+                  world, JWU's academic philosophy is rooted in self-directed mastery. We provide nothing; you define
+                  your own knowledge and expertise.</p>
+            </div>
+            <div class="placeholder-content card">
+               <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                  <h2 style="color: var(--primary-color); margin-bottom: 15px; border-bottom: 1px solid var(--glass-border); padding-bottom: 5px;"
+                     data-translate-key="academicsDegreeExamplesTitle">Degree Examples</h2>
+                  <ul style="list-style: square; margin-left: 20px; margin-bottom: 30px;">
+                     <li data-translate-key="academicsDegreeBS">
+                        <strong>Bachelor of Science</strong><br />
+                        No solid foundation is needed, just be driven by your natural curiosity and shit in the fields
+                        of science and technology.
+                     </li>
+                     <li data-translate-key="academicsDegreeMasters">
+                        <strong>Master's Programs</strong><br />
+                        Fuck the shitty master's supervisor. Achieve complete unspecialization through loose and free
+                        self-study and self-designed advanced courses.
+                     </li>
+                     <li data-translate-key="academicsDegreePhD">
+                        <strong>Doctoral Programs</strong><br />
+                        Participate in formulaic parallel research at your own expense and contribute to the
+                        AI-generated knowledge of the shit mountain at the pinnacle of independent scholarship.
+                     </li>
+                     <li data-translate-key="academicsDegree3plus2">
+                        <strong>3+2 Programs</strong><br />
+                        Embrace the spirit of JWU and accelerate your journey toward a customized degree with select
+                        partner institutions such as Wild Chicken University and Home University (Shanghai Campus).
+                     </li>
+                  </ul>
+                  <h2 style="color: var(--primary-color); margin-bottom: 15px; border-bottom: 1px solid var(--glass-border); padding-bottom: 5px;"
+                     data-translate-key="academicsMajorFieldsTitle">Major Fields</h2>
+                  <p style="margin-bottom: 30px;" data-translate-key="academicsMajorFieldsDesc">
+                     Your major at JWU is a symbol of your independence. You can choose from our nonexistent and
+                     completely unproven portfolio of majors, or achieve true academic autonomy through our renowned
+                     Build Your Major
+                     program. Without the guidance of an expert, this unique pathway is perfectly suited to your unique
+                     temperament.
+                  </p>
+                  <h2 style="color: var(--primary-color); margin-bottom: 15px; border-bottom: 1px solid var(--glass-border); padding-bottom: 5px;"
+                     data-translate-key="academicsAIMinorsTitle">Recommended AI Minors</h2>
+                  <p style="margin-bottom: 15px;" data-translate-key="academicsAIMinorsDesc">
+                     Mastering generative artificial intelligence is fundamental to modern hocus pocus and the creation
+                     of shit mountains. JWU does not offer but recommends the following minors:
+                  </p>
+                  <ul style="list-style: square; margin-left: 20px; margin-bottom: 30px;">
+                     <li data-translate-key="academicsAIMinor1">Minor in Applied ChatGPT Writing</li>
+                     <li data-translate-key="academicsAIMinor2">Minor in Advanced Gemini Imagen 3 Art History</li>
+                     <li data-translate-key="academicsAIMinor3">Minor in Creative Claude Chatting</li>
+                     <li data-translate-key="academicsAIMinor4">Minor in 100 Percent AI Generated Code</li>
+                     <li data-translate-key="academicsAIMinor5">Minor in Professional Sora Prompt Hallucination</li>
+                     <li data-translate-key="academicsAIMinor6">Minor in Advanced Midjourney Cringe Aesthetics</li>
+                     <li data-translate-key="academicsAIMinor7">Minor in Ethical Deepfake Identity Crisis</li>
+                     <li data-translate-key="academicsAIMinor8">Minor in Strategic LinkedIn Bullshit Generation</li>
+                     <li data-translate-key="academicsAIMinor9">Minor in High-Frequency Bot Trading of Virtual Air</li>
+                     <li data-translate-key="academicsAIMinor10">Minor in Laziness and Grok-ing Nothing</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="placeholder-content card">
+               <h2 data-translate-key="academicsHonorsTitle">The JWU Commonshit Honors College</h2>
+               <p style="margin-bottom: 30px;" data-translate-key="academicsHonorsDesc">
+                  Welcome to the JWU Commonshit Honors College! This college is for students who have demonstrated
+                  exceptional talent for self-indulgence or academic folly. Here, honors means we recognize your
+                  ability to thrive without any additional resources, special instruction, or academic challenges of any
+                  kind. You will cultivate your own social anxiety within this first-rate circle of imaginary losers
+                  by attending depressing Honors events and being systematically ghosted by nonexistent faculty who
+                  forgot you ever existed. As a student here, you will have zero access to dedicated advising; instead,
+                  we ensure you navigate blindly toward career failure. You cannot pay extra to write an Honors Thesis,
+                  but you are welcome to produce a massive pile of unreadable, unemployable garbage. You will lay the
+                  foundations for your own future ruin, creating a portfolio of useless work that ensures you remain
+                  remarkably easy to scam. Last but not least, you will have imaginary access to the Honors
+                  Homeless-Learning Community—a decaying space where no classes are taught, study is impossible, and
+                  you can rot alongside other student hostages who have already given up on life. This prestigious title
+                  is the ultimate proof that you possess the exact same nonexistent privileges as every other JWU
+                  student, just with a more pretentious, useless label.
+               </p>
+            </div>
+         </section>
+         <section id="admissions-page" class="page-section">
+            <div class="placeholder-content card" style="margin-top: 30px; margin-bottom: 30px;">
+               <h2 data-translate-key="admissionApplyNowTitle">Apply Now</h2>
+               <p data-translate-key="admissionApplyNowDesc">Ready to join Jason Wang University? You are automatically
+                  accepted! Generate your admission letter now! There is even no rejection letter! Welcome you to the
+                  shitty JWU family with open arms, zero expectations, feces, and hopes!</p>
+            </div>
+            <section id="admission-generator" class="card">
+               <h2 data-translate-key="admissionGeneratorTitle">Admission Letter Generator</h2>
+               <p style="text-align: center; margin-bottom: 20px; color: var(--secondary-color);"
+                  data-translate-key="admissionGeneratorSubtitle">Fill in the details below to generate your own
+                  admission letter.</p>
+               <div class="form-grid">
+                  <div class="form-group full-width">
+                     <label for="student-name" data-translate-key="formLabelStudentName">Student Name:</label>
+                     <input type="text" id="student-name" data-translate-placeholder-key="formPlaceholderStudentName"
+                        placeholder="e.g., Jason Wang" required />
                   </div>
+                  <div class="form-group">
+                     <label for="program-type" data-translate-key="formLabelProgramType">Program Type:</label>
+                     <select id="program-type">
+                        <option value="Undergraduate" data-translate-key="formOptionUndergrad">Undergraduate</option>
+                        <option value="Master's" data-translate-key="formOptionMasters">Master's</option>
+                        <option value="PhD" data-translate-key="formOptionPhD">PhD</option>
+                        <option value="3+2" data-translate-key="formOption3plus2">3+2 Program</option>
+                     </select>
+                  </div>
+                  <div class="form-group" id="partner-uni-wrapper" style="display: none;">
+                     <label for="partner-university" data-translate-key="formLabelPartnerUni">Partner University (for
+                        3+2):</label>
+                     <input type="text" id="partner-university"
+                        data-translate-placeholder-key="formPlaceholderPartnerUni"
+                        placeholder="e.g., Home University (Shanghai Campus)" />
+                  </div>
+                  <div class="form-group">
+                     <label for="major-program" data-translate-key="formLabelMajor">Major / Program Name:</label>
+                     <input type="text" id="major-program" data-translate-placeholder-key="formPlaceholderMajor"
+                        placeholder="e.g., BS Shit Science" required />
+                  </div>
+                  <div class="form-group">
+                     <label for="college-school" data-translate-key="formLabelCollege">College / School:</label>
+                     <input type="text" id="college-school" data-translate-placeholder-key="formPlaceholderCollege"
+                        placeholder="e.g., College of Feces" required />
+                  </div>
+                  <div class="form-group">
+                     <label for="scholarship-details" data-translate-key="formLabelScholarship">Scholarship
+                        (Optional):</label>
+                     <input type="text" id="scholarship-details"
+                        data-translate-placeholder-key="formPlaceholderScholarship"
+                        placeholder="e.g., President Scholarship ($40,000)" />
+                  </div>
+                  <div class="form-group checkbox-group">
+                     <input type="checkbox" id="honors-college" />
+                     <label for="honors-college" data-translate-key="formLabelHonors">Admitted to Commonshit Honors
+                        College</label>
+                  </div>
+                  <button id="generate-pdf-btn" class="generate-btn" data-translate-key="formButtonGenerate">Generate
+                     PDF</button>
+                  <p id="pdf-status"></p>
                </div>
-               <div class="placeholder-content card">
-                  <h2 data-translate-key="academicsHonorsTitle">The JWU Commonshit Honors College</h2>
-                  <p style="margin-bottom: 30px;" data-translate-key="academicsHonorsDesc">
-                     Welcome to the JWU Commonshit Honors College! This college is for students who have demonstrated exceptional talent for self-indulgence or academic folly. Here, honors means we recognize your ability to thrive
-                     without any additional resources, special instruction, or academic challenges of any kind. By joining us, you will have access to the exact same nonexistent privileges and resources as every other JWU student,
-                     but with a more powerful-sounding, useless title.
+            </section>
+            <section id="advanced-diploma-generator" class="card"
+               style="margin-top: 30px; border: 1px solid var(--glass-border);">
+               <h2 data-translate-key="advDipTitle" style="color: var(--secondary-color); text-align: center; margin-bottom: 20px;">Diploma Generator</h2>
+               <p style="text-align: center; margin-bottom: 20px;" data-translate-key="advDipSubtitle">Customize your
+                  academic fraud with precision.</p>
+               <div class="form-grid">
+                  <div class="form-group full-width">
+                     <label data-translate-key="formLabelStudentName">Student Name:</label>
+                     <input type="text" id="adv-dip-name" data-translate-placeholder-key="formPlaceholderStudentName"
+                        placeholder="Name" />
+                  </div>
+
+                  <div class="form-group">
+                     <label data-translate-key="formLabelMajor1">Primary Major:</label>
+                     <input type="text" id="adv-dip-major1" data-translate-placeholder-key="formPlaceholderMajor"
+                        placeholder="e.g. BS Shit Science" />
+                  </div>
+                  <div class="form-group">
+                     <label data-translate-key="formLabelMajor2">Secondary Major (Optional):</label>
+                     <input type="text" id="adv-dip-major2" placeholder="Leave blank if none" />
+                  </div>
+                  <div class="form-group">
+                     <label data-translate-key="formLabelMinor1">Minor 1 (Optional):</label>
+                     <input type="text" id="adv-dip-minor1" placeholder="Leave blank if none" />
+                  </div>
+                  <div class="form-group">
+                     <label data-translate-key="formLabelMinor2">Minor 2 (Optional):</label>
+                     <input type="text" id="adv-dip-minor2" placeholder="Leave blank if none" />
+                  </div>
+
+                  <div class="form-group">
+                     <label data-translate-key="formLabelProgram">Program Type:</label>
+                     <select id="adv-dip-program">
+                        <option value="Standard" data-translate-key="formOptionUndergrad">Standard Program</option>
+                        <option value="3+2" data-translate-key="formOption3plus2">3+2 Program (with Partner)</option>
+                     </select>
+                  </div>
+                  <div id="adv-partner-wrapper" class="form-group" style="display:none;">
+                     <label data-translate-key="formLabelPartnerUni">Partner University:</label>
+                     <input type="text" id="adv-partner-university"
+                        data-translate-placeholder-key="formPlaceholderPartnerUni" placeholder="Partner Name" />
+                  </div>
+
+                  <div class="form-group">
+                     <label data-translate-key="gpaCumulative">Cumulative GPA:</label>
+                     <input type="text" id="adv-dip-gpa" placeholder="e.g. 4.0/4.0" />
+                  </div>
+
+                  <div class="form-group">
+                     <label data-translate-key="formLabelCustom1">Custom Field 1 (e.g. Thesis):</label>
+                     <input type="text" id="adv-dip-custom1" placeholder="e.g. Best Procrastinator Award" />
+                  </div>
+                  <div class="form-group">
+                     <label data-translate-key="formLabelCustom2">Custom Field 2 (e.g. Title):</label>
+                     <input type="text" id="adv-dip-custom2" placeholder="e.g. Professional AI User" />
+                  </div>
+                                    <div class="form-group checkbox-group">
+                     <input type="checkbox" id="adv-dip-honors" />
+                     <label for="adv-dip-honors" data-translate-key="formLabelHonorsCHS">Commonshit Honors Scholar</label>
+                  </div>
+
+                  <button id="adv-gen-btn" class="generate-btn" data-translate-key="formButtonGenerate">Generate
+                     PDF</button>
+                  <p id="adv-dip-status" style="grid-column: 1/-1; text-align: center;"></p>
+               </div>
+               
+            </section>
+         </section>
+         <section id="about-page" class="page-section">
+            <div class="placeholder-content card">
+               <h2 data-translate-key="aboutTitle">About JWU</h2>
+               <div style="text-align: left; max-width: 800px; margin: 20px auto;">
+                  <p style="margin-bottom: 1em;" data-translate-key="aboutPara1">
+                     JWU was ambiguously founded by Jason Wang on April 1, 2025, likely conceived in the midst of a
+                     midterm meltdown and failed social connections, and since its inception, JWU has steadfastly
+                     avoided innovation
+                     in higher education. We cater specifically to the extremely self-reliant and socially confused,
+                     embracing an immaterial identity that is entirely centered around the student—whether it's a
+                     crumpled paper ball
+                     covered in milky, unidentified goo on a dorm table, dozens of gum and boogers stuck under a coffee
+                     shop bar table, or a wild park bench with questionable Wi-Fi.
+                  </p>
+                  <p style="margin-bottom: 1em;" data-translate-key="aboutPara2">
+                     Today, this spirit of shitism has made JWU one of the least-known and most proudly wild-listed
+                     institutions in the world, offering an impromptu academic curriculum that technically accepts
+                     anyone. JWU is
+                     firmly rooted in shit and leads the way in avoiding the promise of global education. We may not
+                     have international students and we don't count them, and we certainly have fewer students studying
+                     abroad than
+                     any other university in the United States because there's simply nowhere else to go.
+                  </p>
+                  <p style="margin-bottom: 1em;" data-translate-key="aboutPara3">
+                     JWU's student body is a mix of students struggling to apply for their ideal offers and young people
+                     who simply don't want to work hard or are just plain funny. The university uses students' own
+                     resources
+                     without spending a penny, ensuring that its scholarships benefit from one perspective: no
+                     scholarships. JWU is the engine of society's waste culture, perfectly representing those who have
+                     mastered the art of
+                     doing absolutely nothing, professionally or otherwise, while developing truly world-class shit
+                     skills.
+                  </p>
+                  <p style="margin-bottom: 1em;" data-translate-key="aboutPara4">
+                     As the most private non-research and non-profit university, JWU provides students with a demanding
+                     education, and conducts research expenses and grants totaling about $0 per year. It counts the
+                     voice in your
+                     head and the most responsive AI chatbot as non-faculty. While others create patents, we excel at
+                     generating vain confidence and browser histories full of porn sites. JWU apparently has a large
+                     network of
+                     invisible alumni who have successfully disappeared from society and remain untraceable to this day,
+                     which may be their choice.
+                  </p>
+                  <hr style="border: 0; border-top: 1px solid var(--glass-border); margin: 2em 0;" />
+                  <img style="display: block; margin: 0 auto 2em auto; height: 50px; width: auto;"
+                     src="JWU_BLK_LOGO.png" alt="Jason Wang University Logo" />
+                  <h3 style="color: var(--primary-color); margin-bottom: 2em; text-align: center;"
+                     data-translate-key="aboutMissionTitle">JWU Mission Statement</h3>
+                  <p style="font-style: italic;" data-translate-key="aboutMissionPara1">
+                     Jason Wang University's name and spirit are derived from one man's valiant efforts to minimize
+                     external obligations. The university exists entirely within the student's radius of hardware and
+                     instant caffeine
+                     (or marijuana high if you are in California and Canada), all of which are magnets for shunning
+                     talented, ambitious individuals.
+                  </p>
+                  <p style="font-style: italic; margin-top: 1em;" data-translate-key="aboutMissionPara2">
+                     Thriving within strict personal boundaries and spanning zero verifiable disciplines, JWU has become
+                     the world's most minimalist platform for circumventing the challenges of learning, teaching,
+                     researching,
+                     building knowledge, and inventing new ways to ignore the human condition. Its students draw
+                     strength from the stimulating power of unfiltered internet access by mastering procrastination,
+                     barely expressing
+                     themselves online, and excelling at avoiding demanding careers. Jason Wang University's mission is
+                     to be a cozy, bottom-tier international hub. This includes not retaining any faculty, encouraging
+                     students to
+                     create projects that attract no funding, and providing an environment of intellectual void. Jason
+                     Wang University seeks to leverage the academic disadvantage of its completely inconvenient location
+                     and
+                     embrace uniformity to ensure a single, unwavering point of view in the educational void.
                   </p>
                </div>
-            </section>
-            <section id="admissions-page" class="page-section">
-               <section id="admission-generator" class="card">
-                  <h2 data-translate-key="admissionGeneratorTitle">Admission Letter Generator</h2>
-                  <p style="text-align: center; margin-bottom: 20px; color: var(--secondary-color);" data-translate-key="admissionGeneratorSubtitle">Fill in the details below to generate your own admission letter.</p>
-                  <div class="form-grid">
-                     <div class="form-group full-width">
-                        <label for="student-name" data-translate-key="formLabelStudentName">Student Name:</label>
-                        <input type="text" id="student-name" data-translate-placeholder-key="formPlaceholderStudentName" placeholder="e.g., Jason Wang" required />
-                     </div>
-                     <div class="form-group">
-                        <label for="program-type" data-translate-key="formLabelProgramType">Program Type:</label>
-                        <select id="program-type">
-                           <option value="Undergraduate" data-translate-key="formOptionUndergrad">Undergraduate</option>
-                           <option value="Master's" data-translate-key="formOptionMasters">Master's</option>
-                           <option value="PhD" data-translate-key="formOptionPhD">PhD</option>
-                           <option value="3+2" data-translate-key="formOption3plus2">3+2 Program</option>
-                        </select>
-                     </div>
-                     <div class="form-group" id="partner-uni-wrapper" style="display: none;">
-                        <label for="partner-university" data-translate-key="formLabelPartnerUni">Partner University (for 3+2):</label>
-                        <input type="text" id="partner-university" data-translate-placeholder-key="formPlaceholderPartnerUni" placeholder="e.g., Home University (Shanghai Campus)" />
-                     </div>
-                     <div class="form-group">
-                        <label for="major-program" data-translate-key="formLabelMajor">Major / Program Name:</label>
-                        <input type="text" id="major-program" data-translate-placeholder-key="formPlaceholderMajor" placeholder="e.g., Shit Science" required />
-                     </div>
-                     <div class="form-group">
-                        <label for="college-school" data-translate-key="formLabelCollege">College / School:</label>
-                        <input type="text" id="college-school" data-translate-placeholder-key="formPlaceholderCollege" placeholder="e.g., College of Feces" required />
-                     </div>
-                     <div class="form-group">
-                        <label for="scholarship-details" data-translate-key="formLabelScholarship">Scholarship (Optional):</label>
-                        <input type="text" id="scholarship-details" data-translate-placeholder-key="formPlaceholderScholarship" placeholder="e.g., President Scholarship ($40,000)" />
-                     </div>
-                     <div class="form-group checkbox-group">
-                        <input type="checkbox" id="honors-college" />
-                        <label for="honors-college" data-translate-key="formLabelHonors">Admitted to Commonshit Honors College</label>
-                     </div>
-                     <button id="generate-pdf-btn" class="generate-btn" data-translate-key="formButtonGenerate">Generate PDF</button>
-                     <p id="pdf-status"></p>
-                  </div>
-               </section>
-               <div class="placeholder-content card" style="margin-top: 30px;">
-                  <h2 data-translate-key="admissionApplyNowTitle">Apply Now</h2>
-                  <p data-translate-key="admissionApplyNowDesc">Ready to join Jason Wang University? You are automatically accepted! Generate your admission letter now! There is even no rejection letter!</p>
-               </div>
-            </section>
-            <section id="about-page" class="page-section">
-               <div class="placeholder-content card">
-                  <h2 data-translate-key="aboutTitle">About JWU</h2>
-                  <div style="text-align: left; max-width: 800px; margin: 20px auto;">
-                     <p style="margin-bottom: 1em;" data-translate-key="aboutPara1">
-                        JWU was ambiguously founded by Jason Wang on April 1, 2025, likely conceived in the midst of a midterm meltdown and failed social connections, and since its inception, JWU has steadfastly avoided innovation
-                        in higher education. We cater specifically to the extremely self-reliant and socially confused, embracing an immaterial identity that is entirely centered around the student—whether it's a crumpled paper ball
-                        covered in milky, unidentified goo on a dorm table, dozens of gum and boogers stuck under a coffee shop bar table, or a wild park bench with questionable Wi-Fi.
-                     </p>
-                     <p style="margin-bottom: 1em;" data-translate-key="aboutPara2">
-                        Today, this spirit of shitism has made JWU one of the least-known and most proudly wild-listed institutions in the world, offering an impromptu academic curriculum that technically accepts anyone. JWU is
-                        firmly rooted in shit and leads the way in avoiding the promise of global education. We may not have international students and we don't count them, and we certainly have fewer students studying abroad than
-                        any other university in the United States because there's simply nowhere else to go.
-                     </p>
-                     <p style="margin-bottom: 1em;" data-translate-key="aboutPara3">
-                        JWU's student body is a mix of students struggling to apply for their ideal offers and young people who simply don't want to work hard or are just plain funny. The university uses students' own resources
-                        without spending a penny, ensuring that its scholarships benefit from one perspective: no scholarships. JWU is the engine of society's waste culture, perfectly representing those who have mastered the art of
-                        doing absolutely nothing, professionally or otherwise, while developing truly world-class shit skills.
-                     </p>
-                     <p style="margin-bottom: 1em;" data-translate-key="aboutPara4">
-                        As the most private non-research and non-profit university, JWU provides students with a demanding education, and conducts research expenses and grants totaling about $0 per year. It counts the voice in your
-                        head and the most responsive AI chatbot as non-faculty. While others create patents, we excel at generating vain confidence and browser histories full of porn sites. JWU apparently has a large network of
-                        invisible alumni who have successfully disappeared from society and remain untraceable to this day, which may be their choice.
-                     </p>
-                     <hr style="border: 0; border-top: 1px solid var(--glass-border); margin: 2em 0;" />
-                     <img style="display: block; margin: 0 auto 2em auto; height: 50px; width: auto;" src="JWU_BLK_LOGO.png" alt="Jason Wang University Logo" />
-                     <h3 style="color: var(--primary-color); margin-bottom: 2em; text-align: center;" data-translate-key="aboutMissionTitle">JWU Mission Statement</h3>
-                     <p style="font-style: italic;" data-translate-key="aboutMissionPara1">
-                        Jason Wang University's name and spirit are derived from one man's valiant efforts to minimize external obligations. The university exists entirely within the student's radius of hardware and instant caffeine
-                        (or marijuana high if you are in California and Canada), all of which are magnets for shunning talented, ambitious individuals.
-                     </p>
-                     <p style="font-style: italic; margin-top: 1em;" data-translate-key="aboutMissionPara2">
-                        Thriving within strict personal boundaries and spanning zero verifiable disciplines, JWU has become the world's most minimalist platform for circumventing the challenges of learning, teaching, researching,
-                        building knowledge, and inventing new ways to ignore the human condition. Its students draw strength from the stimulating power of unfiltered internet access by mastering procrastination, barely expressing
-                        themselves online, and excelling at avoiding demanding careers. Jason Wang University's mission is to be a cozy, bottom-tier international hub. This includes not retaining any faculty, encouraging students to
-                        create projects that attract no funding, and providing an environment of intellectual void. Jason Wang University seeks to leverage the academic disadvantage of its completely inconvenient location and
-                        embrace uniformity to ensure a single, unwavering point of view in the educational void.
-                     </p>
-                  </div>
-               </div>
-            </section>
-         </main>
-         <footer>
-            <img src="JWU_BLK_LOGO.png" alt="JWU Block Logo" class="footer-logo" />
-            <p>&copy; <span id="current-year"></span> Jason Wang University. <span data-translate-key="footerRights">All rights reserved.</span></p>
-         </footer>
-      </div>
-   </body>
+            </div>
+         </section>
+      </main>
+      <footer>
+         <img src="JWU_BLK_LOGO.png" alt="JWU Block Logo" class="footer-logo" />
+         <p>&copy; <span id="current-year"></span> Jason Wang University. <span data-translate-key="footerRights">All
+               rights reserved.</span></p>
+      </footer>
+   </div>
+</body>
+
 </html>
